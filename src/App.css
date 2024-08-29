@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  font-family: "Manrope", sans-serif;
+  text-decoration: none !important;
+  box-sizing: border-box;
+}
+
+:root {
+  font-weight: 800;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --GrayishBlue: hsl(217, 19%, 38%);
+  --DarkGrayishBlue: hsl(217, 19%, 24%);
+  --DarkBlue: hsl(218, 23%, 16%);
+  --LightCyan: hsl(193, 38%, 86%);
+  --NeonGreen: hsl(150, 100%, 66%);
+}
+
+body {
+  background-color: var(--DarkBlue) !important;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  place-items: center;
+}
+
+.advice-card-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dice-container {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.yyy {
+  background-color: var(--DarkGrayishBlue) !important;
+  text-align: center;
+  padding: 2rem;
+  width: 30rem;
+}
+
+.bit {
+  color: var(--NeonGreen) !important;
+}
+.bitA {
+  color: var(--GrayishBlue);
+  font-size: 28px;
+}
+
+.line-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.line-icon-container svg {
+  width: 100%;
+  max-width: 100%;
+}
+.Mobile-line-icon-container svg {
+  width: 100%;
+  max-width: 100%;
+}
+
+.r-icon {
+  fill: var(--NeonGreen);
+}

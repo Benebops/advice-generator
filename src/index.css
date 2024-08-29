@@ -1,0 +1,34 @@
+body {
+  min-height: 100vh;
+}
+
+@media (max-width: 374px) {
+  .yyy {
+    max-width: 18rem;
+  }
+}
+@media (min-width: 390px) {
+  .yyy {
+    max-width: 22rem;
+  }
+}
+@media (min-width: 375px) {
+  .yyy {
+    max-width: 20rem;
+  }
+}
+@media (min-width: 428px) {
+  .yyy {
+    max-width: 24rem;
+  }
+}
+@media (min-width: 768px) {
+  .yyy {
+    max-width: 26rem;
+  }
+}
+@media (min-width: 1200px) {
+  .yyy {
+    max-width: 32rem;
+  }
+}
