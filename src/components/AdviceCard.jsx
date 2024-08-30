@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import { LineIcon } from "./LineIcon";
 import MobileLineIcon from "./MobileLineIcon";
 import RefreshIcon from "./RefreshIcon";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AdviceCard = () => {
   const [slip, setSlip] = useState("");
@@ -13,6 +13,7 @@ const AdviceCard = () => {
 
   const fetchAdvice = async () => {
     setLoading(true);
+    setError(null);
     try {
       const response = await axios.get("https://api.adviceslip.com/advice");
       setSlip(response.data.slip);
@@ -23,10 +24,14 @@ const AdviceCard = () => {
     }
   };
 
+  useEffect(() => {
+    fetchAdvice();
+  }, []);
+
   return (
     <>
       <div className="advice-card-container">
-        <Card  className="fw-bold yyy">
+        <Card className="fw-bold yyy">
           <Card.Body>
             <Card.Title className="bit">Advice #{slip.id}</Card.Title>
             <Card.Text className="bitA">
@@ -37,7 +42,7 @@ const AdviceCard = () => {
               <LineIcon />
             </div>
             <div className="Mobile-line-icon-container d-lg-none">
-            <MobileLineIcon/>
+              <MobileLineIcon />
             </div>
           </Card.Body>
         </Card>
